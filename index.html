@@ -20,41 +20,122 @@ li {
   font-style:italic;
 }
 
-.journal_info {
-  <!-- display: none; -->
-}
-
-.journal_proc {
+.hide {
   display: none;
 }
 
-.conf_info {
-  <!-- display: none; -->
+.namecard {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  padding-left: 20px;
 }
 
-.conf_proc {
-  <!-- display: none; -->
+/* For desktop: */
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
 }
-
-.conf_location {
-  <!-- display: none; -->
-}
-
-.conf_date {
-  <!-- display: none; -->
-}
-
-.non_select {
-  <!-- display: none; -->
-}
-
 </style>
+
+
+
 </head>
 
 
 <body>
-<img src="yjhuang.jpg" width="340" height="545">
 
+<div id="control_panel" class="hide">
+<input type="checkbox" id="journal_info" onclick="OnCheck('journal_info');" checked>
+<label for="journal_info"> 期刊出版資訊 </label><br>
+<input type="checkbox" id="journal_proc" onclick="OnCheck('journal_proc');" >
+<label for="journal_proc"> 期刊綁會議 </label><br>
+<input type="checkbox" id="conf_info" onclick="OnCheck('conf_info');" >
+<label for="conf_info"> 會議出版資訊 </label><br>
+<input type="checkbox" id="conf_proc" onclick="OnCheck('conf_proc');" >
+<label for="conf_proc"> 會議第幾屆 </label><br>
+<input type="checkbox" id="conf_location" onclick="OnCheck('conf_location');" >
+<label for="conf_location"> 會議地點 </label><br>
+<input type="checkbox" id="conf_date" onclick="OnCheck('conf_date');" >
+<label for="conf_date"> 會議日期 </label><br>
+<input type="checkbox" id="non_select" onclick="OnCheck('non_select');" checked>
+<label for="non_select"> 顯示非主要發表 </label><br>
+</div>
+
+<script>
+function Init()
+{
+  UrlParameterControl();
+
+  OnCheck('journal_info');
+  OnCheck('journal_proc');
+  OnCheck('conf_info');
+  OnCheck('conf_proc');
+  OnCheck('conf_location');
+  OnCheck('conf_date');
+  OnCheck('non_select');
+}
+
+//control=all:     發表資訊全部顯示+隱藏控制介面
+//control=show:    預設顯示資訊+顯示控制介面
+//沒有control參數: 預設顯示資訊+隱藏控制介面
+function UrlParameterControl()
+{
+  let url = new URL(location.href);
+  let params = url.searchParams;
+  let control = params.get('control');
+  
+  if(control=="all")
+  {
+    document.getElementById('journal_info').checked = true;
+	document.getElementById('journal_proc').checked = true;
+	document.getElementById('conf_info').checked = true;
+	document.getElementById('conf_proc').checked = true;
+	document.getElementById('conf_location').checked = true;
+	document.getElementById('conf_date').checked = true;
+	document.getElementById('non_select').checked = true;
+  }
+  else if(control=="show")
+  {
+    document.getElementById('control_panel').classList.remove("hide");
+  }
+}
+
+function OnCheck(classname)
+{
+  var items = document.getElementsByClassName(classname);
+
+  if (document.getElementById(classname).checked)
+  {
+    for(var i = 0; i<items.length; i++)
+	{
+	  items[i].classList.remove("hide");
+    }
+  }
+  else
+  {
+    for(var i = 0; i<items.length; i++)
+	{
+	  items[i].classList.add("hide");
+    }
+  }
+}
+</script>
+
+
+<!--
+1. 發表格式: 作者以逗號隔開
+2. 發表格式: paper title 字首大寫 
+3. H-index來源:https://www.scimagojr.com/journalsearch.php
+-->
+
+<div class="container">
+
+<img src="yjhuang.jpg" width="340" height="408">
+
+<div class="namecard">
 <h1>Yi-Jheng Huang (黃怡錚)</h1>
 
 Assistant Professor <br>
@@ -62,14 +143,19 @@ Department of Information Communication <br>
 Yuan Ze University <br>
 Taoyuan, Taiwan <br>
 <br>
-Email: yjhuang@saturn.yzu.edu.tw <br>
+Email: <a href="mailto:yjhuang@saturn.yzu.edu.tw">yjhuang@saturn.yzu.edu.tw</a><br>
 Tel: +886-3-4638800 ext. 2645 <br>
+<br>
+<b>Research Interests:</b><br>
+Computer Graphics <br>
+Mixed Reality <br>
+Human-Computer Interaction <br>
+</div>
 
-<!--
-1. 作者以逗號隔開
-2. paper title 字首大寫 
-3. H-index來源:https://www.scimagojr.com/journalsearch.php
--->
+<h3>About</h3>
+
+Yi-Jheng Huang received her BS degree in Department of Computer Science and Information Engineering from National Dong Hwa University, Taiwan, and her MS and PhD degrees in Department of Computer Science from National Chiao Tung University, Taiwan. Now, she is an assistant professor in the Department of Information Communication, Yuan Ze University. Her research interests include computer graphics, mixed reality, and human-computer interaction.
+
 <h3>Journal Papers</h3>
 
 <ol>
@@ -81,6 +167,7 @@ Yi-Jheng Huang ,Kang-Yi Liu, Suiang-Shyan Lee, I-Cheng Yeh,
 <span class="journal_info">Vol. 37, No. 2, pp. 169-180,</span>
 2021.
 (SCI, Rank: 13/22, IF=1.713)
+[<a href="https://drive.google.com/file/d/1Z8yvF9ODeQp-WkewEXDJqixF9lUVSfwX/view?usp=sharing">Paper</a>]
 </li>
 
 <li>
@@ -90,6 +177,7 @@ Yi-Jheng Huang, Wen-Chieh Lin, I-Cheng Yeh, Tong-Yee Lee,
 <span class="journal_info">Vol. 24, No. 2, pp. 1114-1126,</span>
 2018.
 (SCI, Rank: 11/104, IF=3.78)
+[<a href="https://drive.google.com/file/d/1pJE4l5Cux5EWs3dHW_Ovzu5jSygvYTvx/view?usp=sharing">Paper</a>]
 </li>
 
 <li>
@@ -99,6 +187,7 @@ Suiang-Shyan Lee, Yi-Jheng Huang, Ja-Chen Lin,
 <span class="journal_info">Vol. 76, No. 1, pp. 243-264,</span>
 2017.
 (SCI, Rank: 42/104, IF=1.54)
+[<a href="https://drive.google.com/file/d/158kZMr5-6je7iV1bmOH46QCdJHBtxuFR/view?usp=sharing">Paper</a>]
 </li>
 
 <li>
@@ -109,6 +198,7 @@ Yi-Jheng Huang, Shu-Yuan Zhan, Wen-Chieh Lin, Shan-Yu Chuang,
 2016.
 (SCI, Rank: 41/106, IF=1.12)
 <span class="journal_proc">(Proc. CAD/Graphics 2015)</span>
+[<a href="https://drive.google.com/file/d/1BezpuUpqn8ZZRO2JJvQkKw-8q7uR65Se/view?usp=sharing">Paper</a>]
 </li>
 
 <li>
@@ -268,6 +358,14 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 </li>
 
 </ol>
+
+
+</div>
+
+
+<script>
+Init();
+</script>
 
 </body>
 </html>
