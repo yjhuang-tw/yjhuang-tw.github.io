@@ -10,6 +10,7 @@
 img {
   max-width: 100%;
   height: auto;
+  margin-right: 20px;
 }
 
 li {
@@ -28,7 +29,6 @@ li {
   display: inline-block;
   width: 400px;
   vertical-align: top;
-  padding-left: 20px;
 }
 
 /* For desktop: */
@@ -60,8 +60,22 @@ li {
 <label for="conf_location"> 會議地點 </label><br>
 <input type="checkbox" id="conf_date" onclick="OnCheck('conf_date');" >
 <label for="conf_date"> 會議日期 </label><br>
-<input type="checkbox" id="non_select" onclick="OnCheck('non_select');" checked>
+<input type="checkbox" id="non_select" onclick="OnCheck('non_select');">
 <label for="non_select"> 顯示非主要發表 </label><br>
+<input type="checkbox" id="education" onclick="OnCheck('education');">
+<label for="education"> 學歷 </label><br>
+<input type="checkbox" id="honors" onclick="OnCheck('honors');">
+<label for="honors"> 得獎紀錄 </label><br>
+<input type="checkbox" id="projects" onclick="OnCheck('projects');">
+<label for="projects"> 計畫 </label><br>
+<input type="checkbox" id="courses" onclick="OnCheck('courses');" checked>
+<label for="courses"> 開設課程 </label><br>
+<input type="checkbox" id="students_award" onclick="OnCheck('students_award');">
+<label for="students_award"> 學生獲獎 </label><br>
+<input type="checkbox" id="service" onclick="OnCheck('service');">
+<label for="service"> 專業服務 </label><br>
+<input type="checkbox" id="others" onclick="OnCheck('others');">
+<label for="others"> 其它 </label><br>
 </div>
 
 <script>
@@ -76,6 +90,13 @@ function Init()
   OnCheck('conf_location');
   OnCheck('conf_date');
   OnCheck('non_select');
+  OnCheck('education');
+  OnCheck('honors');
+  OnCheck('projects');
+  OnCheck('courses');
+  OnCheck('students_award');
+  OnCheck('service');
+  OnCheck('others');  
 }
 
 //control=all:     發表資訊全部顯示+隱藏控制介面
@@ -96,6 +117,13 @@ function UrlParameterControl()
 	document.getElementById('conf_location').checked = true;
 	document.getElementById('conf_date').checked = true;
 	document.getElementById('non_select').checked = true;
+	document.getElementById('education').checked = true;
+	document.getElementById('honors').checked = true;
+	document.getElementById('projects').checked = true;
+	document.getElementById('courses').checked = true;
+	document.getElementById('students_award').checked = true;
+	document.getElementById('service').checked = true;
+	document.getElementById('others').checked = true;
   }
   else if(control=="show")
   {
@@ -360,12 +388,103 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 </ol>
 
 
+<div class="education">
+<h3>Education</h3>
+<ul>
+<li>2011-2017 Ph.D. in Computer Science, National Chiao Tung University (NCTU)</li>
+<li>2015-2016 Visiting Student in Computer Science, University of California, Davis</li>
+<li>2007-2009 M.S. in Computer Science, NCTU (GPA: 3.875)</li>
+<li>2003-2007 B.S. in Computer Science, National Dong Hwa University (NDHU) (GPA: 3.62, Rank: 6/50)</li>
+</ul>
 </div>
 
 
+<div class="honors">
+<h3>Honors and Awards</h3>
+<ol>
+<li>2017 斐陶斐</li>
+<li>2012 NCHC 3D Animation Competition – Special Technology Award/ Honorable Mention, National Center for High-Performance Computing</li>
+<li>2008 Creative Digital Film Competition – Honorable Mention, NCTU</li>
+<li>2007 Undergraduate Project Competition – First Place, NDHU</li>
+<li>2006 4C Digital Game Design Competition – Best Programming Award/ XPEC Sponsor Award, Industrial Development Bureau of Ministry of Economic Affairs</li>
+<li>2005 NDHU Presidential Award</li>
+</ol>
+</div>
+
+
+<div class="projects">
+<h3>Projects</h3>
+<ol>
+<li>107年專題研究計畫，科技部，電腦輔助造形產品設計-從基礎幾何技術、產品資料庫建立到3D模型智慧合成。107.05.01 - 110.04.30 (MOST107-2218-E-155-008-MY3)</li>
+<li>2018-2021 高等教育深耕計畫－VR/AR教學應用，教育部，參與人員</li>
+<li>2020-2021 年教育部補助大學社會責任實踐計畫(教育部USR計畫)－艾妲資訊培力，教育部，協同主持人</li>
+<li>2019-2021 智慧創新跨域人才培育聯盟計畫－智慧創新人才培育示範學校計畫(A類)，教育部，參與人員</li>
+<li>大專生計畫 (李玫)</li>
+</ol>
+</div>
+
+
+<div class="courses">
+<h3>Courses</h3>
+<ol>
+<li>IC340B Introduction to Multimedia (多媒體概論)</li>
+<li>IC342 Game Programming (遊戲程式設計)</li>
+<li>IN206 Web Programming (網頁程式設計) (英文授課)</li>
+<li>GI640A Data Visualization (資料視覺化)</li>
+<li class="non_select">FL408 Multimedia Teaching material Production (多媒體教材製作)</li>
+</ol>
+</div>
+
+
+<div class="students_award">
+<h3>指導學生獲獎</h3>
+<ol>
+<li>元智大學108學年度「VR/AR教育應用創作競賽」，第一名，深入日本文化，天啊工作室, 2019/12/20，羅婷、姚昌辰、李秉彥、丁延欣</li>
+<li>2019年計算機圖學研討會VR Battle競賽，數位內容多媒體組－第二名，厲害了我的園，劉芸筝、莊子瑩、連文哲、郭杰龍</li>
+<li>元智大學107學年度VR/AR教育應用創作競賽，入圍，厲害了我的園，劉芸筝、莊子瑩、連文哲、郭杰龍</li>
+<li>元智大學107學年度VR/AR教育應用創作競賽，入圍，英文樂學員，劉康宜、阮柏燁</li>
+</ol>
+</div>
+
+
+<div class="service">
+<h3>服務</h3>
+<ol>
+<li>2020.07.15 擔任 Pacific Graphics 2020 Reviewer, "Towards a Model for Music Visualization"</li>
+<li>2020.07.10 CGW2020 Session Chair (Tracking and Modeling)</li>
+<li>2020.04.02 至新竹女中擔任模擬面試官</li>
+<li>2019.02-2020.01 經濟部工業局數位內容產業發展補助計畫評審委員</li>
+<li>2019.12.23 擔任 IEEE VR 2020 Reviewer，"Gesture Guide Optimization for Realistic Hand-Object Interaction"</li>
+<li>2019.11.17 舉辦 Siggraph Asia 2019 Taiwan Night</li>
+<li>2019.06.27-06.28 舉辦國內研討會，CGW2019</li>
+<li>2019.05.21 元智大學演講，講題：虛擬實境環境中的資料互動系統</li>
+<li>2019.04.26 興仁國小VR體驗推廣</li>
+<li>2018.12.05 華勛國小演講，講題：虛擬實境入門</li>
+<li>2018.11.22 政治大學資科所演講，講題：The Generation and Application of 3D Stylized Models </li>
+<li>2018.02-2019.01 經濟部工業局數位內容產業發展補助計畫評審委員</li>
+<li>107學年度學生活動委員會</li>
+</ol>
+</div>
+
+
+<div class="others">
+<h3>其它</h3>
+
+【新聞報導】2020.03.16 深入日本文化
+
+[<a href="https://www.epochtimes.com.tw/n307332/%E9%AB%94%E9%A9%97%E5%82%B3%E7%B5%B1%E6%97%A5%E6%9C%AC%E6%96%87%E5%8C%96--%E6%A1%83%E5%9C%92%E5%85%83%E6%99%BAVR%E5%AF%A6%E5%A2%83%E8%BC%95%E9%AC%86%E5%AD%B8%E8%AA%9E%E8%A8%80.html">大紀元</a>]
+[<a href="https://www.chinatimes.com/realtimenews/20200316003073-260405?chdtv">中時電子報</a>]
+[<a href="https://udn.com/news/story/6904/4417725">Ｕｄｎ聯合新聞網</a>]
+[<a href="https://money.udn.com/money/story/5723/4417481">經濟日報</a>]
+[<a href="http://mol.mcu.edu.tw/%E5%85%83%E6%99%BA%E5%A4%A7%E5%AD%B8%E9%81%8B%E7%94%A8vr%E5%AF%A6%E5%A2%83%E6%97%A5%E6%9C%AC-%E9%98%B2%E7%96%AB%E4%B8%8D%E5%87%BA%E5%9C%8B%E4%B9%9F%E8%83%BD%E5%AD%B8%E7%BF%92/">銘報</a>]
+
+</div>
+
+
+
+</div> <!-- container -->
 <script>
 Init();
 </script>
-
 </body>
 </html>
