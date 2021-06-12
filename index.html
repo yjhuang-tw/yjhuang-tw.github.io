@@ -18,10 +18,37 @@
 <meta name="keywords" content="Yi-Jheng Huang, 黃怡錚">
 
 <style>
+
+:root {
+  --mybg: #F9F7F0;
+  --myfont: #072A40;
+  --myh3bg: #178CA4;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: var(--myh3bg);
+}
+
+body{
+  font-family:sans-serif;
+  color:var(--myfont);
+  background-color:var(--mybg);
+}
+
+.container {
+  background-color:white;
+}
+
+h3 {
+  color:white;
+  background-color:var(--myh3bg);
+  padding-left: 10px;
+}
+
 img {
   max-width: 100%;
   height: auto;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 li {
@@ -38,6 +65,10 @@ td {
   padding-left: 10px;
 }
 
+.about {
+  padding-left: 10px;
+}
+
 .booktitle {
   font-style:italic;
 }
@@ -50,6 +81,7 @@ td {
   display: inline-block;
   width: 450px;
   vertical-align: top;
+  padding-left: 10px;
 }
 
 /* For desktop: */
@@ -205,7 +237,9 @@ Human-Computer Interaction <br>
 
 <h3>About</h3>
 
+<div class="about">
 Yi-Jheng Huang received her BS degree in Department of Computer Science and Information Engineering from National Dong Hwa University, Taiwan, and her MS and PhD degrees in Department of Computer Science from National Chiao Tung University, Taiwan. Now, she is an assistant professor in the Department of Information Communication, Yuan Ze University. Her research interests include computer graphics, mixed reality, and human-computer interaction.
+</div>
 
 
 <div class="education">
@@ -219,12 +253,8 @@ Yi-Jheng Huang received her BS degree in Department of Computer Science and Info
 </div>
 
 
-
 <h3>Journal Papers</h3>
-
 <ol>
-
-
 <li>
 <!--
 出版商國別: Russia
@@ -566,7 +596,7 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 
 
 <div class="courses">
-<h3>Courses</h3>
+<h3>Teaching</h3>
 <ol>
 <li>Introduction to Multimedia (多媒體概論)
 [<a target="_blank" href="https://portal.yzu.edu.tw/cosSelect/Cos_Plan.aspx?y=109&s=2&id=IC340&c=A">課綱</a>]
@@ -588,9 +618,13 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 <div class="service">
 <h3>服務</h3>
 <ol>
+<li>2021.07 CGW 2021 Program Committee</li>
+<li>2021.07 黃世強老師學生口試委員</li>
+<li>2021.07 葛如鈞老師學生口試委員</li>
 <li>2021.05.05 ITSA 全國大專校院程式設計極客挑戰賽命題委員</li>
 <li>2020.07.15 擔任 Pacific Graphics 2020 Reviewer</li>
 <li>2020.07.10 CGW2020 Session Chair (Tracking and Modeling)</li>
+<li>2020.07.10 CGW 2020 Program Committee</li>
 <li>2020.04.02 至新竹女中擔任模擬面試官</li>
 <li>2019.02-2020.01 經濟部工業局數位內容產業發展補助計畫評審委員</li>
 <li>2019.12.23 擔任 IEEE VR 2020 Reviewer</li>
@@ -650,6 +684,7 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 
 
 </div> <!-- container -->
+
 <script>
 Init();
 </script>
