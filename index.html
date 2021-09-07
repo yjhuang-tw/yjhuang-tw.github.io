@@ -103,33 +103,19 @@ td {
 
 <div id="control_panel" class="hide">
 <input type="checkbox" id="journal_info" onclick="OnCheck('journal_info');" checked>
-<label for="journal_info"> 期刊出版資訊 </label><br>
 <input type="checkbox" id="journal_proc" onclick="OnCheck('journal_proc');" >
-<label for="journal_proc"> 期刊綁會議 </label><br>
 <input type="checkbox" id="conf_info" onclick="OnCheck('conf_info');" >
-<label for="conf_info"> 會議出版資訊 </label><br>
 <input type="checkbox" id="conf_proc" onclick="OnCheck('conf_proc');" >
-<label for="conf_proc"> 會議第幾屆 </label><br>
 <input type="checkbox" id="conf_location" onclick="OnCheck('conf_location');" >
-<label for="conf_location"> 會議地點 </label><br>
 <input type="checkbox" id="conf_date" onclick="OnCheck('conf_date');" >
-<label for="conf_date"> 會議日期 </label><br>
-<input type="checkbox" id="non_select" onclick="OnCheck('non_select');">
-<label for="non_select"> 顯示非主要發表 </label><br>
 <input type="checkbox" id="education" onclick="OnCheck('education');">
-<label for="education"> 學歷 </label><br>
 <input type="checkbox" id="honors" onclick="OnCheck('honors');">
-<label for="honors"> 得獎紀錄 </label><br>
 <input type="checkbox" id="projects" onclick="OnCheck('projects');">
-<label for="projects"> 計畫 </label><br>
 <input type="checkbox" id="courses" onclick="OnCheck('courses');" checked>
-<label for="courses"> 開設課程 </label><br>
 <input type="checkbox" id="students_award" onclick="OnCheck('students_award');">
-<label for="students_award"> 學生獲獎 </label><br>
 <input type="checkbox" id="service" onclick="OnCheck('service');">
-<label for="service"> 專業服務 </label><br>
 <input type="checkbox" id="others" onclick="OnCheck('others');">
-<label for="others"> 其它 </label><br>
+<input type="checkbox" id="non_select" onclick="OnCheck('non_select');">
 </div>
 
 <script>
@@ -178,10 +164,6 @@ function UrlParameterControl()
 	document.getElementById('students_award').checked = true;
 	document.getElementById('service').checked = true;
 	document.getElementById('others').checked = true;
-  }
-  else if(control=="show")
-  {
-    document.getElementById('control_panel').classList.remove("hide");
   }
 }
 
@@ -636,12 +618,13 @@ Yi-Jheng Huang, Wen-Chieh Lin, Yu-Jr Shiang,
 <div class="service">
 <h3>服務</h3>
 <ol>
+<li>2021.09.15 IEEE AIVR 2021 Reviewer</li>
 <li>2021.07.13 CGW2021 Session Chair (Game & Lighting & Machine Vision )</li>
 <li>2021.07-2021.08 課程顧問講師 (格敦企業股份有限公司)</li>
 <li>2021.07.12-13 CGW 2021 Program Committee</li>
 <li>2021.07.07 CHIRA 2021 Reviewer</li>
 <li>2021.06.22 CGW 2021 Reviewer</li>
-<li>2021.07 元智大學王小蕙老師學生口試委員</li>
+<li>2021.07.29 元智大學王小蕙老師學生口試委員</li>
 <li>2021.07.09 國立陽明交通大學黃世強老師學生口試委員</li>
 <li>2021.07.08 國立台北科技大學葛如鈞老師學生口試委員</li>
 <li>2021.05.05 ITSA 全國大專校院程式設計極客挑戰賽命題委員</li>
