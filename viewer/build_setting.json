@@ -1,0 +1,202 @@
+{
+    "items": [
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-AAATRIN02P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 0.5,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-AAATRIN01P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 0.75,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALESDB02P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 0.9999999403953552,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALESDB01P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 1.25,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALAP01P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 1.5,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALEW801P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 1.75,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALESCL01P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 2.0,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALESAP02P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 2.25,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "storage",
+            "machine_id": "STOREDGE",
+            "type": "inside",
+            "x": 0.0,
+            "y": 1.25,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "IDC-ESALEW002P",
+            "type": "inside",
+            "x": -1.0,
+            "y": 2.5,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "S-A19-1U層架",
+            "type": "inside",
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server",
+            "machine_id": "S-A19-2U層架",
+            "type": "inside",
+            "x": 0.0,
+            "y": 0.25,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "storage",
+            "machine_id": "FRAI-002P",
+            "type": "inside",
+            "x": 1.0,
+            "y": 0.5,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "screen",
+            "machine_id": "S-A10-CRT螢幕",
+            "type": "inside",
+            "x": 0.0,
+            "y": 1.75,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "storage",
+            "machine_id": "IT-DCEO-STST",
+            "type": "inside",
+            "x": 1.0,
+            "y": 2.25,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server_rack",
+            "machine_id": "S-A16",
+            "type": "outside",
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server_rack",
+            "machine_id": "S-A21",
+            "type": "outside",
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        },
+        {
+            "mesh_name": "server_rack",
+            "machine_id": "S-A20",
+            "type": "outside",
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "rx": 0.0,
+            "ry": 0.0,
+            "rz": 0.0
+        }
+    ]
+}
