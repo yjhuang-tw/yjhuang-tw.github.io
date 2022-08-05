@@ -1,0 +1,32 @@
+{
+"machines": [
+    {
+      "id": "IDC-X001",
+      "mesh_name": "SERVER_PARTB",
+      "tag_info": "API-001機器",
+      "parent": "A07",
+	    "locationU": 1
+    },
+    {
+      "id": "IDC-X002",
+      "mesh_name": "SERVER_PARTB",
+      "tag_info": "API-002機器",
+      "parent": "A07",
+	    "locationU": 2
+    },
+    {
+      "id": "IDC-X003",
+      "mesh_name": "SERVER_PARTB",
+      "tag_info": "API-003機器",
+      "parent": "A08",
+	    "locationU": 3
+    },
+    {
+      "id": "IDC-X004",
+      "mesh_name": "SERVER_PARTB",
+      "tag_info": "API-004機器",
+      "parent": "A08",
+	    "locationU": 4
+    }
+  ]
+}

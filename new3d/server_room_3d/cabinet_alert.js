@@ -1,0 +1,1 @@
+function CabinetAlertUpdate(){$.ajax({url:"http://132.145.121.108:8081/render/api/alertCabinetList",dataType:"json",crossDomain:!0,contentType:"application/json",xhrFields:{withCredentials:!0}}).done(function(n){window.parent.postMessage(n.nameList,"*")}).fail(function(n,e){console.log(n),console.log(e)})}window.addEventListener("load",function(n){CabinetAlertUpdate()});

@@ -1,0 +1,17 @@
+<svg width="220" height="110" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(216,193,193);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(92,16,51);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(82,96,160);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(92,16,51);stop-opacity:1" />
+    </linearGradient>    
+  </defs>
+  <path stroke="#000" id="svg_4" d="m0,0 l134,0 l-5,7 l-129,0, -7z" opacity="1.0" stroke-width="0" fill="url(#grad2)"/>
+  <path stroke="#000" id="svg_7" d="m138,0 l5,0 l-5,7 l-5,0 l5,-7z" opacity="1.0" stroke-width="0" fill="#8D3434"/>
+  <path stroke="#000" id="svg_8" d="m147,0 l5,0 l-5,7 l-5,0 l5,-7z" opacity="1.0" stroke-width="0" fill="#8D3434"/>
+  <rect id="svg_9" height="1" width="220" y="10" x="0" stroke-width="0" stroke="#000" fill="url(#grad1)"/>
+  <path stroke="#000" id="svg_12" d="m210,110 l-210,0 l0,-99 l220,0 l0,90" opacity="0.95" stroke-width="0" fill="#880E1D"/>
+</svg>
