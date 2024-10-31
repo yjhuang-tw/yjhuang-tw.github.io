@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #time {
+            text-align: center;
+            transition: font-size 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="time">--:--:--</div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').textContent = `${hours}:${minutes}`;
+        }
+
+        function resizeFont() {
+            const timeElement = document.getElementById('time');
+            const fontSize = window.innerHeight / 2;
+            timeElement.style.fontSize = `${fontSize}px`;
+        }
+
+        updateTime();
+        resizeFont();
+
+        setInterval(updateTime, 1000);
+        
+        window.addEventListener('resize', resizeFont);
+    </script>
+</body>
+</html>
