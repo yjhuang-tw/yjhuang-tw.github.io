@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿嬤的日常</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fdf6ec;
+      font-family: 'Noto Serif TC', serif;
+      color: #4a3728;
+      overflow-x: hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #c8864a 0%, #e8a87c 50%, #f2c79a 100%);
+      padding: 60px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #fdf6ec;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .header-emoji {
+      font-size: 80px;
+      display: block;
+      margin-bottom: 16px;
+      animation: sway 3s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: 0.1em;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #fff3e8;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      max-width: 780px;
+      margin: 60px auto 80px;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #e8a87c, #c8864a, #a0522d);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .event {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    .event:nth-child(1)  { animation-delay: 0.1s; }
+    .event:nth-child(2)  { animation-delay: 0.2s; }
+    .event:nth-child(3)  { animation-delay: 0.3s; }
+    .event:nth-child(4)  { animation-delay: 0.4s; }
+    .event:nth-child(5)  { animation-delay: 0.5s; }
+    .event:nth-child(6)  { animation-delay: 0.6s; }
+    .event:nth-child(7)  { animation-delay: 0.7s; }
+    .event:nth-child(8)  { animation-delay: 0.8s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* left card */
+    .event.left {
+      flex-direction: row-reverse;
+    }
+
+    .card {
+      width: calc(50% - 40px);
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 4px 18px rgba(180,100,50,0.12);
+      border: 1px solid #f0dbc8;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(180,100,50,0.2);
+    }
+
+    .event.left .card  { margin-right: 40px; }
+    .event.right .card { margin-left:  40px; }
+
+    .dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 46px;
+      height: 46px;
+      background: #fff;
+      border: 3px solid #c8864a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      z-index: 1;
+      top: 10px;
+    }
+
+    .time-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #c8864a;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      color: #7a4520;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: #7a6055;
+    }
+
+    /* ── Quote section ── */
+    .quote-section {
+      background: linear-gradient(135deg, #f5dfc0, #fce8d0);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .quote-section blockquote {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.35rem;
+      line-height: 2;
+      color: #7a4520;
+      font-style: italic;
+      position: relative;
+    }
+
+    .quote-section blockquote::before,
+    .quote-section blockquote::after {
+      content: '"';
+      font-size: 4rem;
+      color: #e8a87c;
+      line-height: 0;
+      position: relative;
+      top: 20px;
+    }
+
+    .quote-section cite {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #b07050;
+      font-style: normal;
+    }
+
+    /* ── Photo gallery ── */
+    .gallery-section {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      color: #7a4520;
+      margin-bottom: 36px;
+      letter-spacing: 0.08em;
+    }
+
+    .section-title span {
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #c8864a;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 16px 18px;
+      box-shadow: 0 3px 14px rgba(180,100,50,0.1);
+      border: 1px solid #f0dbc8;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover { transform: translateY(-5px); }
+
+    .gallery-item .icon {
+      font-size: 52px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .gallery-item h4 {
+      font-size: 1rem;
+      color: #7a4520;
+      margin-bottom: 6px;
+    }
+
+    .gallery-item p {
+      font-size: 0.85rem;
+      color: #9a7060;
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #7a4520;
+      color: #f5dfc0;
+      text-align: center;
+      padding: 36px 20px;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    footer .heart {
+      color: #f2a060;
+      font-size: 1.2rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+
+      .timeline::before { left: 22px; }
+
+      .event, .event.left {
+        flex-direction: column;
+      }
+
+      .dot {
+        left: 22px;
+        top: 0;
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+      }
+
+      .card {
+        width: 100%;
+        margin-left: 54px !important;
+        margin-right: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <span class="header-emoji">👵</span>
+    <h1>阿嬤的日常</h1>
+    <p>每一天，都是滿滿的愛與溫暖</p>
+  </header>
+
+  <!-- ── Timeline ── -->
+  <section class="timeline">
+
+    <div class="event right">
+      <div class="dot">🌅</div>
+      <div class="card">
+        <div class="time-label">清晨 05:30</div>
+        <h3>早起拜拜、點香</h3>
+        <p>天還沒亮，阿嬤就輕手輕腳起床，到神明廳上香祈福，保佑全家平安健康。那嫋嫋香煙，是她每天第一句悄悄話。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">🍚</div>
+      <div class="card">
+        <div class="time-label">清晨 06:30</div>
+        <h3>煮早飯、熬粥</h3>
+        <p>廚房裡飄出米粥的香氣，配上醬瓜、滷蛋，簡單卻最暖胃。阿嬤說，吃得好才有力氣顧家。</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">🚶‍♀️</div>
+      <div class="card">
+        <div class="time-label">上午 07:30</div>
+        <h3>去公園走路運動</h3>
+        <p>晨光灑落，阿嬤換上運動鞋，踱步到公園繞幾圈。遇到熟面孔就停下來聊聊天，走路是順便的，聊天才是正事。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">🤸‍♀️</div>
+      <div class="card">
+        <div class="time-label">上午 08:30</div>
+        <h3>參加社團健康操</h3>
+        <p>社區活動中心的健康操班，阿嬤一堂都沒缺席。音樂一下，手腳跟著節奏動起來，跳完整個人神清氣爽，比吃補藥還有效。</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">🌿</div>
+      <div class="card">
+        <div class="time-label">上午 09:00</div>
+        <h3>澆花</h3>
+        <p>院子裡的花花草草，都是阿嬤一手照顧的。她拿著舊水桶，一株一株慢慢澆，邊跟植物說話。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">🧺</div>
+      <div class="card">
+        <div class="time-label">上午 09:30</div>
+        <h3>洗衣曬衣</h3>
+        <p>手洗的衣服掛上竹竿，陽光一曬就有淡淡的香。阿嬤說，機器洗的少了那股「日頭味」。</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">🛒</div>
+      <div class="card">
+        <div class="time-label">上午 10:30</div>
+        <h3>去市場買菜</h3>
+        <p>挎著菜籃和熟悉的攤販說說笑笑，豬肉要選帶點油花的，青菜要摸摸看有沒有新鮮。這是阿嬤最愛的社交時間。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">🍲</div>
+      <div class="card">
+        <div class="time-label">中午 11:30</div>
+        <h3>煮一桌好菜</h3>
+        <p>控肉、菜脯蛋、薑母鴨……每道菜都有秘方。鍋鏟聲、油爆聲，交織成一首最溫暖的午餐交響樂。</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">📚</div>
+      <div class="card">
+        <div class="time-label">下午 14:00</div>
+        <h3>圖書館看雜誌研究財經</h3>
+        <p>阿嬤拎著布包走進圖書館，直奔財經雜誌區。股市、基金、利率，一頁一頁仔細看，筆記本還密密麻麻寫了重點。旁邊的年輕人都說：這阿嬤比我懂。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">🧳</div>
+      <div class="card">
+        <div class="time-label">不定期出遊</div>
+        <h3>隨意旅遊</h3>
+        <p>包包一背，說走就走。搭火車、坐客運，景點不重要，沿途風景才有趣。阿嬤說：人老了更要多走走，坐著等老沒意思。</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">🍢</div>
+      <div class="card">
+        <div class="time-label">下午 16:00</div>
+        <h3>出門吃小吃</h3>
+        <p>麵線羹、蚵仔煎、肉圓、臭豆腐……每攤都是老朋友。阿嬤說吃小吃不是為了填飽肚子，是為了那個味道、那個心情。</p>
+      </div>
+    </div>
+
+    <div class="event left">
+      <div class="dot">▶️</div>
+      <div class="card">
+        <div class="time-label">傍晚 17:00</div>
+        <h3>看 Youtube 隨意選</h3>
+        <p>平板放在腿上，手指滑啊滑，從食譜影片看到旅遊Vlog，再跳到懷舊老歌。阿嬤說：比電視好看多了，自己選！</p>
+      </div>
+    </div>
+
+    <div class="event right">
+      <div class="dot">🛏️</div>
+      <div class="card">
+        <div class="time-label">晚上 20:00</div>
+        <h3>上床休息睡覺</h3>
+        <p>早睡早起身體好。阿嬤拉上窗簾、調好鬧鐘，沒多久呼吸就平穩了。明天又是充實的一天。</p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ── Quote ── -->
+  <section class="quote-section">
+    <blockquote>
+      阿嬤的愛，沒有說出口，<br>
+      卻藏在每一碗熱湯、每一件厚毛衣，<br>
+      還有那句「吃飽了沒？」
+    </blockquote>
+    <cite>— 獻給每一位偉大的阿嬤</cite>
+  </section>
+
+  <!-- ── Gallery ── -->
+  <section class="gallery-section">
+    <h2 class="section-title">阿嬤的寶貝收藏 <span></span></h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <span class="icon">🫖</span>
+        <h4>老茶壺</h4>
+        <p>泡了幾十年的烏龍茶，越老越香</p>
+      </div>
+      <div class="gallery-item">
+        <span class="icon">📿</span>
+        <h4>佛珠手串</h4>
+        <p>每天念珠撥一撥，心裡就踏實了</p>
+      </div>
+      <div class="gallery-item">
+        <span class="icon">🪴</span>
+        <h4>盆栽花園</h4>
+        <p>每盆都有名字，比孫子還親</p>
+      </div>
+      <div class="gallery-item">
+        <span class="icon">🧴</span>
+        <h4>萬金油</h4>
+        <p>頭痛、蚊咬、腰酸，一瓶全搞定</p>
+      </div>
+      <div class="gallery-item">
+        <span class="icon">📸</span>
+        <h4>家族老相片</h4>
+        <p>黑白照裡，阿嬤年輕時真的很美</p>
+      </div>
+      <div class="gallery-item">
+        <span class="icon">🪡</span>
+        <h4>針線盒</h4>
+        <p>各色線頭纏在一起，和記憶一樣</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>用心記錄阿嬤每一個平凡而珍貴的日子</p>
+    <p style="margin-top: 10px;">
+      製作於 2026 &nbsp;<span class="heart">♥</span>&nbsp; 感謝有妳在
+    </p>
+  </footer>
+
+</body>
+</html>
